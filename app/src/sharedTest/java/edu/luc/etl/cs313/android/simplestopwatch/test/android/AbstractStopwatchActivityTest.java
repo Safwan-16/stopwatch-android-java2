@@ -4,15 +4,12 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import android.widget.Button;
 import android.widget.TextView;
 import edu.luc.etl.cs313.android.simplestopwatch.R;
 import edu.luc.etl.cs313.android.simplestopwatch.android.StopwatchAdapter;
-
-import static edu.luc.etl.cs313.android.simplestopwatch.common.Constants.SEC_PER_MIN;
 
 /**
  * Abstract GUI-level test superclass of several essential stopwatch scenarios.
@@ -23,6 +20,8 @@ import static edu.luc.etl.cs313.android.simplestopwatch.common.Constants.SEC_PER
  * non-instrumentation unit tests properly.
  */
 public abstract class AbstractStopwatchActivityTest {
+
+    private static final int SEC_PER_MIN = ;
 
     /**
      * Verifies that the activity under test can be launched.

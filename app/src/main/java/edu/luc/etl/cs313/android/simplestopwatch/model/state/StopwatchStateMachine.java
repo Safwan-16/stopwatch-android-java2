@@ -10,4 +10,10 @@ import edu.luc.etl.cs313.android.simplestopwatch.model.clock.TickListener;
  *
  * @author laufer
  */
-public interface StopwatchStateMachine extends StopwatchUIListener, TickListener, StopwatchModelSource, StopwatchSMStateView { }
+public interface StopwatchStateMachine extends StopwatchUIListener, TickListener, StopwatchModelSource, StopwatchSMStateView {
+    void toLapStoppedState();
+
+    void actionLap();
+
+    void onLapReset();
+}

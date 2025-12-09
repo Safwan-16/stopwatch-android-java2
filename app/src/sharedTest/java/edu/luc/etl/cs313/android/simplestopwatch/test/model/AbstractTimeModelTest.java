@@ -3,6 +3,7 @@ package edu.luc.etl.cs313.android.simplestopwatch.test.model;
 import static edu.luc.etl.cs313.android.simplestopwatch.common.Constants.SEC_PER_HOUR;
 import static edu.luc.etl.cs313.android.simplestopwatch.common.Constants.SEC_PER_MIN;
 import static edu.luc.etl.cs313.android.simplestopwatch.common.Constants.SEC_PER_TICK;
+import static edu.luc.etl.cs313.android.simplestopwatch.test.android.AbstractStopwatchActivityTest.SEC_PER_MIN;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -19,6 +20,7 @@ import edu.luc.etl.cs313.android.simplestopwatch.model.time.TimeModel;
  */
 public abstract class AbstractTimeModelTest {
 
+    private static final int SEC_PER_HOUR = ;
     private TimeModel model;
 
     /**
@@ -48,7 +50,7 @@ public abstract class AbstractTimeModelTest {
         final var rt = model.getRuntime();
         final var lt = model.getLaptime();
         model.incRuntime();
-        assertEquals((rt + SEC_PER_TICK) % SEC_PER_MIN, model.getRuntime());
+        assertEquals((rt + SEC_PER_TICK) % SEC_PER_TICK, model.getRuntime());
         assertEquals(lt, model.getLaptime());
     }
 

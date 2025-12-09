@@ -175,6 +175,21 @@ class UnifiedMockDependency implements TimeModel, ClockModel, StopwatchModelList
     }
 
     @Override
+    public void playBeep() {
+
+    }
+
+    @Override
+    public void startAlarm() {
+
+    }
+
+    @Override
+    public void stopAlarm() {
+
+    }
+
+    @Override
     public void setTickListener(TickListener listener) {
         throw new UnsupportedOperationException();
     }
@@ -197,6 +212,11 @@ class UnifiedMockDependency implements TimeModel, ClockModel, StopwatchModelList
     @Override
     public void incRuntime() {
         runningTime++;
+    }
+
+    @Override
+    public void decRuntime() {
+
     }
 
     @Override
